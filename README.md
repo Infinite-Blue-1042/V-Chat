@@ -1,2 +1,2 @@
-# V-Cart
-Here, you can add items from our inventory and check them out!
+# V-Chat
+Here, you can chat with family and firends easily with V-Chat!
