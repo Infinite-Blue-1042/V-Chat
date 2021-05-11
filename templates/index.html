@@ -1,44 +1,32 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <link rel="stylesheet" href="styleforhome.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Comfortaa:wght@400;500;700&family=Lato:ital,wght@0,300;1,900&family=Merriweather:wght@300&family=Squada+One&display=swap" rel="stylesheet">
-    <a href="{{ url_for('login') }}">Click here to log in!</a>
+<title>VP-Chat</title>
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap" rel="stylesheet">
+  <script type='text/javascript' src='https://cdn.scaledrone.com/scaledrone.min.js'>
+  </script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
 </head>
-<title>Home Screen</title>
 <body>
-    <div><input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." style="font-family: 'Poppins', sans-serif; border-style: solid; border-width: 2px; border-color: #000000;"><ul id="myUL" style="visibility: hidden; font-family: 'Lato', sans-serif; width: 365px;"> <li><a href="file:///C:/Users/chitt/Microsoft%20VS%20Code/Code/HTML/NewSiteVP/bestsmphones.html">What are the best smartphones in 2021 so far?</a></li></ul><h1></h1><center id="titl">CodeNews</center></h1></div>
-    <hr id="horizline">
-    <br>
-    <div>
-        <div id="newstories" style="margin-left: 5px; width: 300px;">
-            <h1 style="display: inline-block; margin-left: 69px;"><center>New Stories</center></h1>
-            <h2><center><a href="file:///C:/Users/chitt/Microsoft%20VS%20Code/Code/HTML/NewSiteVP/bestsmphones.html" style="background-color: #cccccc;">What are the best smartphones in 2021 so far?</a></center></h2>
-        </div>
-        <div id="news" style="display: inline-block; margin-left: 30px; width: 956px;">
-            <h1><center style="margin-bottom: 70px;">Recommended</center></h1>
-            <h2><center><a href="file:///C:/Users/chitt/Microsoft%20VS%20Code/Code/HTML/NewSiteVP/bestsmphones.html">What are the best smartphones in 2021 so far?</a></center></h2>
-        </div>
-    </div>
-<script>
-function myFunction() {
-    var input, filter, ul, li, a, i, txtValue;
-    input = document.getElementById("myInput");
-    filter = input.value.toUpperCase();
-    ul = document.getElementById("myUL");
-    li = ul.getElementsByTagName("li");
-    for (i = 0; i < li.length; i++) {
-        a = li[i].getElementsByTagName("a")[0];
-        txtValue = a.textContent || a.innerText;
-        if (txtValue.toUpperCase().indexOf(filter) > -1 && filter != "") {//change here
-            li[i].style.display = "";
-            li[i].style.visibility = "visible";//change here
-        } else {
-            li[i].style.display = "none";
-        }
-    }
-}
-</script>
+  <script src="myScript.js"></script>
+<div class="row">
+      <div class="column">
+        <p><div id="thicker" class="members-count">-</div></p>
+        <br>
+      </div>
+      <div class="column">
+        <div style="float:right;" id="memlist" class="members-list">-</div>
+      </div>
+</div>
+<br>
+<hr style="height: 3px; background-color: #000000;">
+  <center><div id="messager" class="messages"></div></center>
+  <center><form class="message-form" onsubmit="return false;"/></center>
+    <center><input class="message-form__input" placeholder="Type a message.." type="text"/></center>
+  </form>
 </body>
 </html>
