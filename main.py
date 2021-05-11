@@ -11,4 +11,8 @@ def login():
 def main():
 	return render_template('index.html')
 
+@staticmethod
+def insert_record(doc):
+    Database.DB.Database.insert_one({"user_chat"})
+
 web_site.run(host='0.0.0.0', port=8080)
